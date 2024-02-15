@@ -1,8 +1,8 @@
 import wikipediaapi
 
-wiki_wiki = wikipediaapi.Wikipedia('Console Check', 'en')
+wiki_wiki = wikipediaapi.Wikipedia('Console Checker', 'en')
 
-print("       Console Check")
+print("     Console Checker")
 print("---------------------------")
 game_title = input("Enter a game to check what consoles it was released on:")
 # game_title = "Gran Turismo (series)"
