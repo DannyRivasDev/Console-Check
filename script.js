@@ -54,8 +54,3 @@ function loadGames(url){
 // load games
 loadGames(url);
 
-loadMoreGamesBtn.addEventListener("click", ()=>{
-    if(nextGameListUrl){
-        loadGames(nextGameListUrl);
-    }
-})
