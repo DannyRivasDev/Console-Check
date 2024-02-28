@@ -1,3 +1,3 @@
 # Console-Check
-Check what console a game was released on using the RAWG API.
+Check what consoles a game was released on using the RAWG API.
 (Work in Progess)
