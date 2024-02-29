@@ -7,8 +7,8 @@ const url = `https://api.rawg.io/api/games?key=${APIKEY}&dates=2024-01-01,2024-1
 
 const getPlatformStr = (platforms) => {
     const platformStr = platforms.map(pl => pl.platform.name).join(", ");
-    if (platformStr.length > 30) {
-        return platformStr.substring(0, 30) + "...";
+    if (platformStr.length > 20) {
+        return platformStr.substring(0, 20) + "...";
     }
     return platformStr;
 }
