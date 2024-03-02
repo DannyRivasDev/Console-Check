@@ -34,7 +34,7 @@ function loadGames(url){
                                 <li><i class="fa-regular fa-calendar"></i> <span class="date">${game.released}</span></li>
                                 </ul>
                         </div>
-                        </div>
+                    </div>
                 `
                 gameList.insertAdjacentHTML("beforeend", gameItemEl)
             });
