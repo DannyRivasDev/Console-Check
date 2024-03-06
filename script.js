@@ -35,7 +35,7 @@ function loadGames(url){
                                 </ul>
                         </div>
                 </div>
-                ` 
+                `
                 gameList.insertAdjacentHTML("beforeend", gameItemEl)
             });
             loaderEl.classList.add("loaded");
