@@ -45,7 +45,6 @@ function loadGames(url){
                 loadMoreGamesBtn.classList.add("hidden");
             }
         })
-        
         .catch(error => {
             console.log("An error occurred:", error);
         });
