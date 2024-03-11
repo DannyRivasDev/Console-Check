@@ -50,6 +50,7 @@ function loadGames(url){
         });
 }
 
+
 // load games
 loadGames(url);
 
