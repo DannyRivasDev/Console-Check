@@ -22,7 +22,7 @@ function loadGames(url){
         .then(data => {
             nextGameListUrl = data.next ? data.next : null;
             const games = data.results;
-    
+
             games.forEach(game => {
                 const gameItemEl = `
                 <div class="col-lg-3 col-md-6 col-sm-12">
