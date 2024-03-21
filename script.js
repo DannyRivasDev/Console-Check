@@ -36,6 +36,7 @@ function loadGames(url){
                         </div>
                 </div>
                 `
+                
                 gameList.insertAdjacentHTML("beforeend", gameItemEl)
             });
             loaderEl.classList.add("loaded");
