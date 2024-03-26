@@ -14,7 +14,7 @@ const getPlatformStr = (platforms) => {
 }
 function loadGames(url){
     loaderEl.classList.remove("loaded");
-    
+
     // Fetch recently released games from RAWG API
     fetch(url)
         .then(response => response.json())
@@ -48,7 +48,6 @@ function loadGames(url){
             console.log("An error occurred:", error);
         });
 }
-
 // load games
 loadGames(url);
 
