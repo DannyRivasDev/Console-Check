@@ -48,7 +48,6 @@ function loadGames(url){
             console.log("An error occurred:", error);
         });
 }
-
 // load games
 loadGames(url);
 
