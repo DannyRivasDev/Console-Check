@@ -12,6 +12,7 @@ const getPlatformStr = (platforms) => {
     }
     return platformStr;
 }
+
 function loadGames(url){
     loaderEl.classList.remove("loaded");
 
