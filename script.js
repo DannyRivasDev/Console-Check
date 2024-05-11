@@ -10,7 +10,7 @@ const getPlatformStr = (platforms) => {
     if (platformStr.length > 30) {
         return platformStr.substring(0, 30) + "...";
     }
-    return platformStr;
+    return platformStr; 
 }
 
 function loadGames(url){
