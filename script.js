@@ -24,7 +24,7 @@ function loadGames(url){
                 <div class="col-lg-3 col-md-6 col-sm-12">
                         <div class="item">
                         <img src="${game.background_image}" alt="${game.name} image">
-                            <h4 class="game-name">${game.name}<br><span class="platforms">${getPlatformStr(game.parent_platforms)}</span></h4>
+                            <h4 class="game-name">${game.name}<br><span class="platforms">${getPlatformStr(game.platforms)}</span></h4>
                             <ul>
                             <li><i class="fa fa-star"></i> <span class="rating">${game.rating}</span></li>
                                 <li><i class="fa-regular fa-calendar"></i> <span class="date">${game.released}</span></li>
