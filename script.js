@@ -6,7 +6,7 @@ let nextGameListUrl = null;
 const url = `https://api.rawg.io/api/games?key=${APIKEY}&dates=2024-01-01,2024-06-30&ordering=-added`
 
 const getPlatformStr = (platforms) => {
-    const platformStr = platforms.map(pl => pl.platform.name).join(", ");
+    const platformStr = platforms.map(pl => pl.platform.name).join("<br>");
     
     return platformStr;
 }
