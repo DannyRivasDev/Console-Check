@@ -47,17 +47,16 @@ function loadGames(url){
 }
 document.addEventListener('DOMContentLoaded', function () {
     const searchInput = document.getElementById('searchInput');
+    const searchButton = document.getElementById('searchButton');
 
-    searchInput.addEventListener('keyup', function (event) {
-        const query = event.target.value;
+    searchButton.addEventListener('click', function () {
+        const query = searchInput.value;
         const searchURL = `https://api.rawg.io/api/games?key=${APIKEY}&search=${query}`;
         console.log("Search URL:", searchURL);
         loadGames(searchURL)
 
     });
 });
-// loadGames(url);
-// loadGames(searchURL);
 
 loadMoreGamesBtn.addEventListener("click", ()=>{
     if(nextGameListUrl){
