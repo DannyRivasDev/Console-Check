@@ -13,6 +13,10 @@ const getPlatformStr = (gameName, platforms) => {
     }).join("<br>");
 }
 
+const getPriceChartingUrl = (gameName) => {
+    return `https://www.pricecharting.com/search-products?q=${encodeURIComponent(gameName)}`;
+}
+
 function loadGames(url){
 
     fetch(url)
@@ -22,6 +26,7 @@ function loadGames(url){
             const games = data.results;
     
             games.forEach(game => {
+                const priceChartingUrl = getPriceChartingUrl(game.name);
                 const gameItemEl = `
                 <div class="col-lg-3 col-md-6 col-sm-12">
                         <div class="item">
@@ -31,6 +36,7 @@ function loadGames(url){
                                 <li><i class="fa fa-star"></i> <span class="rating">${game.rating}</span></li>
                                 <li><i class="fa-regular fa-calendar"></i> <span class="date">${game.released}</span></li>
                             </ul>
+                            <span><a href="${priceChartingUrl}" target="_blank">Price Charting</a></span>
                         </div>
                         </div>
                 `
