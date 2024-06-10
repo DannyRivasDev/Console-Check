@@ -12,7 +12,7 @@ const getPlatformStr = (platforms) => {
 }
 
 function loadGames(url){
-    // loaderEl.classList.remove("loaded");
+
     fetch(url)
         .then(response => response.json())
         .then(data => {
