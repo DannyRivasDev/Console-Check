@@ -5,10 +5,12 @@ let nextGameListUrl = null;
 
 const url = `https://api.rawg.io/api/games?key=${APIKEY}&dates=2024-01-01,2024-06-30&ordering=-added`
 
-const getPlatformStr = (platforms) => {
-    const platformStr = platforms.map(pl => pl.platform.name).join("<br>");
-    
-    return platformStr;
+const getPlatformStr = (gameName, platforms) => {
+    return platforms.map(pl => {
+        const platformName = pl.platform.name;
+        const ebaySearchUrl = `https://www.ebay.com/sch/i.html?_nkw=${encodeURIComponent(gameName)}+${encodeURIComponent(platformName)}`;
+        return `<a href="${ebaySearchUrl}" target="_blank">${platformName}</a>`;
+    }).join("<br>");
 }
 
 function loadGames(url){
@@ -23,12 +25,12 @@ function loadGames(url){
                 const gameItemEl = `
                 <div class="col-lg-3 col-md-6 col-sm-12">
                         <div class="item">
-                        <img src="${game.background_image}" alt="${game.name} image">
-                            <h4 class="game-name">${game.name}<br><span class="platforms">${getPlatformStr(game.platforms)}</span></h4>
+                            <img src="${game.background_image}" alt="${game.name} image">
+                            <h4 class="game-name">${game.name}<br><span class="platforms">${getPlatformStr(game.name, game.platforms)}</span></h4>
                             <ul>
-                            <li><i class="fa fa-star"></i> <span class="rating">${game.rating}</span></li>
+                                <li><i class="fa fa-star"></i> <span class="rating">${game.rating}</span></li>
                                 <li><i class="fa-regular fa-calendar"></i> <span class="date">${game.released}</span></li>
-                                </ul>
+                            </ul>
                         </div>
                         </div>
                 `
