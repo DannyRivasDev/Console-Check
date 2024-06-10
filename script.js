@@ -3,7 +3,7 @@ const loaderEl = document.getElementById("js-preloader");
 const loadMoreGamesBtn = document.querySelector(".main-button")
 let nextGameListUrl = null;
 
-const url = `https://api.rawg.io/api/games?key=${"51a0a8acf6a64feb8ee6eefdfd2e254f"}&dates=2024-01-01,2024-06-30&ordering=-added`
+// const url = `https://api.rawg.io/api/games?key=${APIKEY}&dates=2024-01-01,2024-06-30&ordering=-added`
 
 const getPlatformStr = (gameName, platforms) => {
     return platforms.map(pl => {
@@ -59,7 +59,8 @@ document.addEventListener('DOMContentLoaded', function () {
 
     searchButton.addEventListener('click', function () {
         const query = searchInput.value;
-        const searchURL = `https://api.rawg.io/api/games?key=${"51a0a8acf6a64feb8ee6eefdfd2e254f"}&search=${query}`;
+        const api = "51a0a8acf6a64feb8ee6eefdfd2e254f"
+        const searchURL = `https://api.rawg.io/api/games?key=${api}&search=${query}`;
         console.log("Search URL:", searchURL);
         loadGames(searchURL)
 
