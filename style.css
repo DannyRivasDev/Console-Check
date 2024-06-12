@@ -422,7 +422,7 @@ Media Queries (Responsive Styles)
 
 @media (max-width: 768px) {
   #searchInput {
-    max-width: 300px;
+    max-width: 400px;
     font-size: 14px;
   }
 
@@ -434,7 +434,7 @@ Media Queries (Responsive Styles)
 
 @media (max-width: 480px) {
   #searchInput {
-    max-width: 200px;
+    max-width: 400px;
     font-size: 12px;
     padding: 8px;
   }
