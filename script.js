@@ -30,7 +30,9 @@ function loadGames(url){
                 const gameItemEl = `
                 <div class="col-lg-3 col-md-6 col-sm-12">
                         <div class="item">
-                            <img src="${game.background_image}" alt="${game.name} image">
+                            <a href="${priceChartingUrl}" target="_blank">
+                                <img src="${game.background_image}" alt="${game.name} image">
+                            </a>
                             <h4 class="game-name">${game.name}<br><span class="platforms">${getPlatformStr(game.name, game.platforms)}</span></h4>
                             <ul>
                                 <li><i class="fa fa-star"></i> <span class="rating">${game.rating}</span></li>
