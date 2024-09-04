@@ -6,7 +6,7 @@ https://dannyrivasdev.github.io/Console-Check/
 
 ## Usage
 - Enter the name of the game in the search bar.
-- Click the "Search" button to fetch and display the game details.
+- Click the "Search" button or the "Enter" key to fetch and display the game details.
 - Click on the game image or the "Price Charting" link to view current market price information.
 - Click on the platform names to search for the game on eBay.
 
