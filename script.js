@@ -59,13 +59,19 @@ document.addEventListener('DOMContentLoaded', function () {
     const searchInput = document.getElementById('searchInput');
     const searchButton = document.getElementById('searchButton');
 
-    searchButton.addEventListener('click', function () {
+    function searchGames() {
         const query = searchInput.value;
-        const api = "51a0a8acf6a64feb8ee6eefdfd2e254f"
+        const api = "51a0a8acf6a64feb8ee6eefdfd2e254f";
         const searchURL = `https://api.rawg.io/api/games?key=${api}&search=${query}`;
         console.log("Search URL:", searchURL);
-        loadGames(searchURL)
+        loadGames(searchURL);
+    }
 
+    searchButton.addEventListener('click', searchGames);
+    searchInput.addEventListener('keypress', function (e) {
+        if (e.key === 'Enter') {
+            searchGames();
+        }
     });
 });
 
