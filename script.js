@@ -75,9 +75,3 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 });
 
-// loadMoreGamesBtn.addEventListener("click", ()=>{
-//     if(nextGameListUrl){
-//         loadGames(nextGameListUrl);
-//     }
-// })
-
