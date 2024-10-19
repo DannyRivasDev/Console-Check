@@ -3,7 +3,7 @@ const loaderEl = document.getElementById("js-preloader");
 const loadMoreGamesBtn = document.querySelector(".main-button")
 let nextGameListUrl = null;
 
-// const url = `https://api.rawg.io/api/games?key=${APIKEY}&dates=2024-01-01,2024-06-30&ordering=-added`
+// const url = `https://api.rawg.io/api/games?key=${APIKEY}&dates=2024-01-01,2024-09-30&ordering=-added`
 
 const getPlatformStr = (gameName, platforms) => {
     return platforms.map(pl => {
